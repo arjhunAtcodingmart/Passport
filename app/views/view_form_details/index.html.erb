@@ -1,0 +1,33 @@
+<div ng-controller="appController">
+<h2>Details</h2>
+<table>
+    <thead>
+        <th>Applicanat Id </th>
+        <th>Applicant Name  </th>
+        <th>Created date </td>
+        <th>Created time </td>
+        <th>Last Updated </td>
+        <th>Last Updated time</td>
+        <th>Show Data</th>
+        <th>Delete Data</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="applicant_detail in datum">
+            <td>{{applicant_detail.id}}</td>
+            <td>{{applicant_detail.first_name}}</td>
+            <td>{{applicant_detail.created_at.substring(0,10)}}</td>
+            <td>{{applicant_detail.created_at.substring(11,20)}}</td>
+            <td>{{applicant_detail.updated_at.substring(0,10)}}</td>
+            <td>{{applicant_detail.updated_at.substring(11,20)}}</td>            
+            <td><a href='/passport_form/{{applicant_detail.id}}/edit'><button class="btn btn-success" ng-model="show" ng-click="handleShow(applicant_detail)">Show</button></a></td>
+            <td><button class="btn btn-danger" ng-model="delete" ng-click="handleDelete(applicant_detail)">Delete</button></td>
+        </tr>
+    </tbody>
+</table><br>
+<a href="/"><button class="btn btn-primary">Back</button></a>
+</div>
+<script type="text/javascript">
+    var json={
+    "datum": <%= @applicant_detail.to_json.html_safe %>
+    }
+</script>

@@ -1,0 +1,31 @@
+<b>Applicant's Given Name (Given Name means First Name followed by middle Name (if any)) *</b>
+<input class="first_name" name="firstName" type="text" ng-model="data.applicantData.first_name" required>
+        <span style="color:red" ng-show="myForm.$submitted && myForm.firstName.$invalid">
+            <span ng-show="myForm.firstName.$error.required">Firstname is required</span><br>
+        </span>
+ 
+<b>Surname</b>
+<input class="surname" type="text" ng-model="data.applicantData.surname">
+<div>
+    <b>Are you known by any other names(aliases)? *</b>
+        <input type="radio" class="other_names_1" name="otherName" ng-model="data.applicantData.other_names" required value="yes">Yes
+        <input type="radio" class="other_names_2" name="otherName" ng-model="data.applicantData.other_names" required value="no">No
+            <span style="color:red" ng-show="myForm.$submitted && myForm.otherName.$invalid">
+                <span ng-show="myForm.otherName.$error.required">please select this field</span><br>
+            </span>
+</div>
+<div>
+    <b>Have you ever changed your name ? *</b>
+        <input type="radio" class="name_changed_1" ng-model="data.applicantData.name_changed" name="nameChanged" required value="yes">Yes
+        <input type="radio" class="name_changed_2" ng-model="data.applicantData.name_changed" name="nameChanged" required value="no">No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.nameChanged.$error.required">please select this field</span><br>
+            </span>
+</div>
+<div>
+    <b>Date of Birth (DD/MM/YYYY) *</b>
+    <input class="dob" type="date" name="dob" ng-model="data.applicantData.dob " required>
+        <span style="color:red" ng-show="myForm.$submitted && myForm.dob.$invalid">
+            <span ng-show="myForm.dob.$error.required">please enter DOB</span><br>
+        </span>
+<div>

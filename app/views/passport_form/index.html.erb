@@ -1,0 +1,63 @@
+<div ng-controller="appController" class="container col-sm-12 col-md-12 col-lg-12">
+    <h3><center><b>PASSPORT APPLICATION FORM</b></center></h3>
+    <h4><center><b>Government of India, Ministry of External Affirs</b></center></h4>
+    <div>
+        <span class="gov_emblem">
+            <img class="govEmblem" src="/gov.png" alt="Indian_Emblem">
+        </span>
+        <span>
+            <p class="head_info">Please read the Passport Instruction Booklet carefully before filling the form. Furnishing of incorrect information/
+            suppression of information would lead to rejection of application and would attract penal provisions as prescribed
+            under the Passports Act, 1967. Please produce your original documents at the time of submission of the form. All fields
+            marked with (*) are mandatory to fill.</p>
+        </span>
+    </div>
+       <form name="myForm" ng-submit="validate(myForm.$invalid)" novalidate>
+       <div class="Each_head">
+            <h6><b>Service Required</b></h6>
+       </div>
+            <%=render '/passport_form/service_required_form'%>
+
+        <div class="Each_head">
+            <h6><b>Applicant Detail</b></h6>
+       </div>
+            <%=render '/passport_form/applicant_detail'%>
+
+        <div class="Each_head">
+            <h6><b>Place Of Birth</b></h6>
+        </div>
+            <%=render '/passport_form/place_of_birth'%>
+
+        <div class="Each_head">
+            <h6><b>Family Details (You have to provide atleast one Father/Mother/Legal Guardian details.)</b></h6>
+        </div>
+            <%=render '/passport_form/family_detail'%>
+
+        <div class="Each_head">
+            <h6><b>Present Residential Address details (where applicant presently resides)</b></h6>
+        </div>
+            <%=render '/passport_form/present_address' %>
+
+        <div class="Each_head">
+            <h6><b>Emergency Contact Details *</b></h6>
+        </div>
+            <%=render '/passport_form/contact_detail' %>
+
+        <div class="Each_head">
+            <h6><b>References in your Village or Town or City</b></h6>
+        </div>
+            <%=render '/passport_form/reference_address' %>
+
+        <div class="Each_head">
+            <h6><b>Previous Passport/ Application Details</b></h6>
+        </div>
+            <%=render '/passport_form/application_details' %>
+
+        <div class="Each_head">
+            <h6><b>Other Details</b></h6>
+        </div>
+            <%=render '/passport_form/other_details' %>
+        <button ng-if="!data.applicantData.id" type="submit" class="btn btn-success">Submit</button>
+        <button ng-if="data.applicantData.id" class="btn btn-success">Update</button>
+       <form>
+</div>

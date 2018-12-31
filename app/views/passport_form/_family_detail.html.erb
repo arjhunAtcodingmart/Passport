@@ -1,0 +1,33 @@
+<div>
+    <b>Father's Given Name (Given Name means First Name followed by Middle Name (If any)) </b>
+        <input class="father_name" type="text" name="fatherName" ng-model="data.familyData.father_name" ng-required="!data.familyData.guardian_name && !data.familyData.mother_name">
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.fatherName.$error.required">please enter atleast one name</span><br>
+            </span>
+</div>
+<div>
+    <b>Surname</b>
+        <input class="father_surname" type="text" ng-model="data.familyData.father_surname">
+</div>
+<div>
+    <b>Legal Guardian's Given Name (if applicable)</b>
+        <input class="guardian_name" type="text" ng-model="data.familyData.guardian_name" ng-required="!data.familyData.father_name && !data.familyData.mother_name">        
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.fatherName.$error.required">please enter atleast one name</span><br>
+            </span>
+</div>
+<div>
+    <b>Surname</b>
+        <input class="guardian_surname" type="text" ng-model="data.familyData.guardian_surname">
+</div>
+<div>
+    <b>Mother's Given Name (Given Name means First Name followed by Middle Name (If any)) </b>
+        <input class="mother_name" type="text" ng-model="data.familyData.mother_name" ng-required="!data.familyData.guardian_name && !data.familyData.father_name">
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.fatherName.$error.required">please enter atleast one name</span><br>
+            </span>
+</div>
+<div>
+    <b>Surname</b>
+        <input class="mother_surname" type="text" ng-model="data.familyData.mother_surname">
+</div>

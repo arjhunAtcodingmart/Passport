@@ -1,0 +1,25 @@
+<p><b>Have you held/ hold any diplomatic/ official passport? </b></p>
+<div>
+    <b>Passport Number</b>
+        <input class="passport_num" type="text" ng-model="data.otherData.passport_num">
+    <b class="doi_head">Date of Issue(DD/MM/YYYY)</b>
+        <input class="doi" type="date" ng-model="data.otherData.doi">
+</div>
+<div>
+    <b>Date of Expiry (DD/MM/YYYY)</b>
+        <input class="doe" type="date" ng-model="data.otherData.doe">
+</div>
+<div>
+    <b>Place of Issue </b>
+        <input class="poi" type="text" ng-model="data.otherData.poi">
+</div>
+<div>
+    <b>Have you ever applied for passport, but not issued? *</b>
+        <input type="radio" class="passport_issue_yes" ng-model="data.otherData.passport_issue" name="passportIssue" value="yes" required>Yes
+        <input type="radio" class="passport_issue_no" ng-model="data.otherData.passport_issue" name="passportIssue" value="no" required>No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.passportIssue.$error.required">please select this field</span><br>
+            </span>
+</div>
+
+        

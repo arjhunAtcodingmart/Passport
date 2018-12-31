@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  passport_num: MyString
+  doi: MyString
+  doe: MyString
+  poi: MyString
+  passport_issue: MyString
+  applicant_id: 1
+  charged: MyString
+  offence: MyString
+  denied: MyString
+  revoked: MyString
+  political_asylum: MyString
+  ec: MyString
+
+two:
+  passport_num: MyString
+  doi: MyString
+  doe: MyString
+  poi: MyString
+  passport_issue: MyString
+  applicant_id: 1
+  charged: MyString
+  offence: MyString
+  denied: MyString
+  revoked: MyString
+  political_asylum: MyString
+  ec: MyString

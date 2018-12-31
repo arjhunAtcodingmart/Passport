@@ -1,0 +1,27 @@
+<div>
+    <b>First Reference Name and Address *</b>
+        <input class="first_refer_address" name="first_ref_address" type="text" ng-model="data.addressData.first_refer_address" required>
+            <span style="color:red" ng-show="myForm.$submitted && myForm.first_ref_address.$invalid">
+                <span ng-show="myForm.first_ref_address.$error.required">please enter the address</span><br>
+            </span>
+</div>
+<div>
+    <b>Mobile Number</b>
+        <input class="first_refer_mobile_number" type="text" ng-model="data.addressData.first_refer_mobile_number">
+    <b class="first_refer_telephone_number">Telephone Number</b>
+        <input class="first_refer_telephone_number" type="text" ng-model="data.addressData.first_refer_telephone_number">        
+</div>
+
+<div>
+    <b>Second Reference Name and Address *</b>
+        <input class="second_refer_address" name="second_ref_address" type="text" ng-model="data.addressData.second_refer_address" required>
+            <span style="color:red" ng-show="myForm.$submitted && myForm.second_ref_address.$invalid">
+                <span ng-show="myForm.second_ref_address.$error.required">please enter the address</span><br>
+            </span>
+</div>
+<div>
+    <b>Mobile Number</b>
+        <input class="second_refer_mobile_number" type="text" ng-model="data.addressData.second_refer_mobile_number">
+    <b class="second_refer_telephone_number">Telephone Number</b>
+        <input class="second_refer_telephone_number" type="text" ng-model="data.addressData.second_refer_telephone_number">        
+</div>

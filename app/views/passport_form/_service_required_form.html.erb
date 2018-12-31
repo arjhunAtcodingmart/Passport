@@ -1,0 +1,28 @@
+    <p><b>Applying for *</b>
+    <select ng-model="data.serviceData.select_type" class="type_input" name="typeInput" ng-options="x for x in applyFor" required></select>
+        <span style="color:red" ng-show="myForm.$submitted && myForm.typeInput.$invalid">
+            <span ng-show="myForm.typeInput.$error.required">please select the applying type</span><br>
+        </span>
+    </p>
+    <div>
+        <b>Type of Application * </b>
+            <input type="radio" class="type_of_application_1" ng-model="data.serviceData.type_of_application" name="type_of_application" value="normal" required>Normal
+            <input type="radio" class="type_of_application_2" ng-model="data.serviceData.type_of_application" name="type_of_application" value="Tatkaal" required>Tatkaal
+                <span style="color:red" ng-show="myForm.$submitted">
+                    <span ng-show="myForm.type_of_application.$error.required">select the type of application</span><br>
+                </span>
+    </div>
+    <div>
+        <b>Type of Passport Booklet *</b>
+            <input type="radio" class="type_of_passport_1" ng-model="data.serviceData.type_of_passport" name="type_of_passport" value="36_Pages" required>36 Pages
+            <input type="radio" class="type_of_passport_2" ng-model="data.serviceData.type_of_passport" name="type_of_passport" value="60_Pages" required>60 Pages
+                <span style="color:red" ng-show="myForm.$submitted">
+                    <span ng-show="myForm.type_of_passport.$error.required">select the type of Passport Booklet</span><br>
+                </span>
+    </div>
+    <div>
+        <b>Validity Required (For minors between 15 and 18)</b>
+            <input type="radio" class="validation_1" ng-model="data.serviceData.validity" name="validation" value="10_years">10 years
+            <input type="radio" class="validation_2" ng-model="data.serviceData.validity" name="validation" value="up_to_age_18">Up to age 18
+            <input type="radio" class="validation_3" ng-model="data.serviceData.validity" name="validation" value="not_applicable">Not Applicable
+    </div>

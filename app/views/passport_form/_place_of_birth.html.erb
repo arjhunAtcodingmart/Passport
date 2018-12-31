@@ -1,0 +1,89 @@
+<div>
+    <b>Village or Town or City *</b>
+        <input class="city" type="text" name="city" ng-model="data.applicantData.city">
+            <span style="color:red" ng-show="myForm.$submitted && myForm.city.$invalid">
+                <span ng-show="myForm.city.$error.required">please enter your Town or City name</span><br>
+            </span>
+</div>
+<div>
+    <b>Country (If abroad)* </b>
+        <select ng-model="data.applicantData.select_country" class="country" name="country" ng-required="!data.applicantData.select_state">
+            <option ng-repeat ="country in countries">{{country}}</option>
+        </select>
+            <span style="color:red" ng-show="myForm.$submitted && myForm.country.$invalid">
+                <span ng-show="myForm.country.$error.required">please enter your country</span><br>
+            </span>
+</div>
+<div>
+    <b>State (If in India)*</b>
+        <select ng-model="data.applicantData.select_state" name="state" class="state" ng-required="!data.applicantData.select_country" ng-options="x for x in state" ng-change="districtData(data.applicantData.select_state)"></select>
+            <span style="color:red" ng-show="myForm.$submitted && myForm.state.$invalid">
+                <span ng-show="myForm.state.$error.required">please enter your state</span><br>
+            </span>
+    <b class="district_head">District (If in India)*</b>
+        <select ng-model="data.applicantData.select_district" name="district" class="district" ng-options="x for x in district" ng-required="data.applicantData.select_state"></select>
+            <span style="color:red" ng-show="myForm.$submitted && myForm.district.$invalid">
+                <span ng-show="myForm.district.$error.required">please enter your district</span><br>
+            </span>
+</div>
+<p>If born before 15/08/1947 in a place now in Pakistan or Bangladesh, select "Undivided India".</p>
+<div>
+    <b>Gender* </b>
+        <select ng-model="data.applicantData.select_gender" name="gender" class="gender" ng-options="x for x in gender" required></select>
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.gender.$error.required">please select your gender</span><br>
+            </span>
+    <b class="marital_status_head">Marital Status *</b>
+        <select ng-model="data.applicantData.select_marital" name="marital_status" class="marital_status" ng-options="x for x in marital_status" required></select>
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.marital_status.$error.required">please select your gender</span><br>
+            </span>
+    <b class="citizenship_head">Citizenship of India by *</b>
+        <select ng-model="data.applicantData.select_citizenship" name="citizenship" class="citizenship" ng-options="x for x in citizenship" required></select>
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.citizenship.$error.required">please select your gender</span><br>
+            </span>
+</div>
+<div>
+    <b>PAN (If available)</b>
+        <input class="pan_id" name="pan" type="text" ng-model="data.applicantData.pan_id" ng-maxlength="10">
+            <p style="color:red" ng-if="!myForm.pan.$valid">Invalid pan Id</p>
+    <b class="voter_id_head">Voter ID (If available)</b>
+        <input class="voter_id" name="voter" type="text" ng-model="data.applicantData.voter_id" ng-maxlength="11">
+            <p style="color:red" ng-if="!myForm.voter.$valid">Invalid voter Id</p>
+</div>
+<div>
+    <b>Employment Type *</b>
+        <select ng-model="data.applicantData.select_employment" name="employment" class="employment" ng-options="x for x in employment_type" required></select>
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.employment.$error.required">please select your Employment Type</span><br>
+            </span>
+</div>
+<div>
+    <b>Is either of your parent (in case of minor)/ spouse, a government servant? *</b>
+        <select ng-model="data.applicantData.select_gov_servant" name="govServant" class="gov_servant" ng-options="x for x in gov_servant"></select>
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.govServant.$error.required">please select this Field</span><br>
+            </span>
+</div>
+<div>
+    <b>Educational Qualification *</b>
+        <select ng-model="data.applicantData.select_qualification" name="qualification" class="edu_qualification" ng-options="x for x in edu_qualification" required></select>
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.qualification.$error.required">please select your Educational Qualification</span><br>
+            </span>
+    <b class="non_ecr_head">Are you eligible for Non-ECR category? *</b>
+        <select ng-model="data.applicantData.select_non_e_c_r" name="nonEcr" class="non_ecr" ng-options="x for x in non_ecr" required></select>
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.nonEcr.$error.required">please select this Field</span><br>
+            </span>
+</div>
+<div>
+    <b>Visible Distinguishing Mark</b>
+        <input class="mark" type="text" ng-model="data.applicantData.mark"> 
+</div>
+<div>
+    <b>Aadhaar Number</b>
+        <input class="aadhaar_number" type="text" name="aadhaar" ng-model="data.applicantData.aadhaar_number" ng-maxlength="12">
+            <span style="color:red" ng-if="!myForm.aadhaar.$valid">Invalid aadhaar number</span>            
+</div>

@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  surname: MyString
+  other_names: MyString
+  name_changed: MyString
+  dob: MyString
+  city: MyString
+  select_state: MyString
+  select_district: MyString
+  select_gender: MyString
+  select_marital: MyString
+  select_citizenship: MyString
+  select_employment: MyString
+  select_gov_servant: MyString
+  select_qualification: MyString
+  select_non_e_c_r=string: MyString
+
+two:
+  first_name: MyString
+  surname: MyString
+  other_names: MyString
+  name_changed: MyString
+  dob: MyString
+  city: MyString
+  select_state: MyString
+  select_district: MyString
+  select_gender: MyString
+  select_marital: MyString
+  select_citizenship: MyString
+  select_employment: MyString
+  select_gov_servant: MyString
+  select_qualification: MyString
+  select_non_e_c_r=string: MyString

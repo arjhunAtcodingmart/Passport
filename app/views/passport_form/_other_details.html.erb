@@ -1,0 +1,73 @@
+<div>
+    <b>1) Have you ever been charged with criminal proceedings or any arrest warrant/ summon pending
+before a court of India? *</b>
+        <input type="radio" class="charged_yes" ng-model="data.otherData.charged" name="charged" value="yes" required>Yes
+        <input type="radio" class="charged_no" ng-model="data.otherData.charged" name="charged" value="no" required>No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.charged.$error.required">please select this field</span><br>
+            </span>
+</div>
+<div>
+    <b class="offence_head">2) Have you at any time during the period of 5 years immediately preceding the date of this application
+been convicted by a court in India for any criminal offence and sentenced to imprisonment for two
+years or more? *</b>
+        <input type="radio" class="offence_yes" ng-model="data.otherData.offence" name="offence" value="yes" required>Yes
+        <input type="radio" class="offence_no" ng-model="data.otherData.offence" name="offence" value="no" required>No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.offence.$error.required">please select this field</span><br>
+            </span>
+</div>
+<div>
+    <b>3) Have you ever been refused or denied passport? *</b>
+        <input type="radio" class="denied_yes" ng-model="data.otherData.denied" name="denied" value="yes" required>Yes
+        <input type="radio" class="denied_no" ng-model="data.otherData.denied" name="denied" value="no" required>No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.denied.$error.required">please select this field</span><br>
+            </span>
+</div>
+<div>
+    <b>4) Has your Passport ever been impounded or Revoked? *</b>
+        <input type="radio" class="revoked_yes" ng-model="data.otherData.revoked" name="revoked" value="yes" required>Yes
+        <input type="radio" class="revoked_no" ng-model="data.otherData.revoked" name="revoked" value="no" required>No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.revoked.$error.required">please select this field</span><br>
+            </span>
+</div>
+<div>
+    <b>5) Have you ever applied for/ been granted political asylum to/ by any foreign country? *</b>
+        <input type="radio" class="political_asylum_yes" ng-model="data.otherData.political_asylum" name="political_asylum" value="yes" required>Yes
+        <input type="radio" class="political_asylum_no" ng-model="data.otherData.political_asylum" name="political_asylum" value="no" required>No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.political_asylum.$error.required">please select this field</span><br>
+            </span>
+</div>
+<div>
+    <b>6) Have you ever returned to India on Emergency Certificate (EC) or were ever deported or repatriated? *</b>
+        <input type="radio" class="ec_yes" ng-model="data.otherData.ec" name="ec" value="yes" required>Yes
+        <input type="radio" class="ec_no" ng-model="data.otherData.ec" name="ec" value="no" required>No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.ec.$error.required">please select this field</span><br>
+            </span>
+</div>
+<div class="self_declaration">
+    <b>Self Declaration</b>
+    <p class="policies"> I owe allegiance to the sovereignty , unity & integrity of India, and have not voluntarily acquired citizenship or travel document of any
+    other country. I have not lost, surrendered or been deprived of the the citizenship of India and I affirm that the information given by me in
+    this form and the enclosures is true and I solely responsible for its accuracy, and I am liable to be penalized or prosecuted if found
+    otherwise. I am aware that under the Passport Act, 1967 it is a criminal offence to furnish any false information or to suppress any material
+    information with a view to obtaining passport or travel document.</p>
+    <input class="agree" type="checkbox" ng-model="data.otherData.accept"> I Agree<br>
+        
+</div>
+<div>
+<b>Place *</b>
+    <input class="place" type="text" name="place" ng-model="data.otherData.place" required>
+        <span style="color:red" ng-show="myForm.$submitted && myForm.place.$invalid">
+            <span ng-show="myForm.place.$error.required">Please Enter the place</span><br>
+        </span>
+<b>Date (DD/MM/YYYY) *</b>
+    <input class="date" type="date" name="date" ng-model="data.otherData.date" required>
+    <span style="color:red" ng-show="myForm.$submitted && myForm.date.$invalid">
+            <span ng-show="myForm.date.$error.required">Please Enter the date</span><br>
+        </span>
+</div>

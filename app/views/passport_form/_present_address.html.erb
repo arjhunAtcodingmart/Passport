@@ -1,0 +1,16 @@
+<div>
+    <b>Is your present address out of India? *</b>
+        <input type="radio" class="address_in_out_yes" ng-model="data.addressData.address_in_out" name="address_in_out" value="yes" required>Yes
+        <input type="radio" class="address_in_out_no" ng-model="data.addressData.address_in_out" name="address_in_out" value="no" required>No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.address_in_out.$error.required">please select this field</span><br>
+            </span>
+</div>
+<div>
+    <b>Is permanent address same as present address? * </b>
+        <input type="radio" class="address_same_yes" ng-model="data.addressData.address_same" name="address_same" value="yes" required>Yes
+        <input type="radio" class="address_same_no" ng-model="data.addressData.address_same" name="address_same" value="no" required>No
+            <span style="color:red" ng-show="myForm.$submitted">
+                <span ng-show="myForm.address_same.$error.required">please select this field</span><br>
+            </span>
+</div>

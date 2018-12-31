@@ -1,0 +1,20 @@
+<div>
+    <b>Name and Address *</b>
+        <input class="address" name="emergency_address" type="text" ng-model="data.addressData.address" required>
+            <span style="color:red" ng-show="myForm.$submitted && myForm.emergency_address.$invalid">
+                <span ng-show="myForm.emergency_address.$error.required">please Enter the address</span><br>
+            </span>
+</div>
+<div>
+    <b>Mobile Number</b>
+        <input class="mobile_number" type="text" ng-model="data.addressData.mobile_number">
+    <b class="telephone_number">Telephone Number</b>
+        <input class="telephone_number" type="text" ng-model="data.addressData.telephone_number">        
+</div>
+<div>
+    <b>Email</b>
+        <input class="email" name="email" type="email" ng-pattern="emailFormat" ng-model="data.addressData.email">
+        <span style="color:red" class="error" ng-show="myForm.email.$error.pattern">
+            Not valid email!
+        </span>
+</div>

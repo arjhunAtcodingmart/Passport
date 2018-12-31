@@ -1,0 +1,18 @@
+<%=render template:'/passport_form/index' %>
+
+<script type="text/javascript">
+var data ={
+    "serviceData": <%= @service.to_json.html_safe %>,
+    "applicantData" : <%= @applicant_detail.to_json.html_safe %>,
+    "familyData" : <%= @family_detail[0].to_json.html_safe %>,
+    "addressData": <%= @address_detail[0].to_json.html_safe %>,
+    "otherData": <%= @other_detail[0    ].to_json.html_safe %>
+}
+data.applicantData.dob = new Date(data.applicantData.dob);
+data.otherData.doe = new Date(data.otherData.doe);
+data.otherData.doi =  new Date(data.otherData.doi);
+data.otherData.date = new Date(data.otherData.date);
+var json={
+"data":data,
+}
+</script>

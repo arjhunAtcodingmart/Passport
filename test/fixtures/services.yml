@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  select_type: MyString
+  type_of_application: MyString
+  type_of_passport: MyString
+  validity: MyString
+
+two:
+  select_type: MyString
+  type_of_application: MyString
+  type_of_passport: MyString
+  validity: MyString

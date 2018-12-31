@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address_same: MyString
+  address_in_out: MyString
+  address: MyString
+  mobile_number: MyString
+  telephone_number: MyString
+  email: MyString
+  first_refer_address: MyString
+  first_refer_mobile_number: MyString
+  first_refer_telephone_number: MyString
+  second_refer_address: MyString
+  second_refer_mobile_number: MyString
+  second_refer_telephone_number: MyString
+  passport_num: MyString
+  doi: MyString
+  doe: MyString
+  poi: MyString
+  passport_issue: MyString
+  applicant_id: 1
+
+two:
+  address_same: MyString
+  address_in_out: MyString
+  address: MyString
+  mobile_number: MyString
+  telephone_number: MyString
+  email: MyString
+  first_refer_address: MyString
+  first_refer_mobile_number: MyString
+  first_refer_telephone_number: MyString
+  second_refer_address: MyString
+  second_refer_mobile_number: MyString
+  second_refer_telephone_number: MyString
+  passport_num: MyString
+  doi: MyString
+  doe: MyString
+  poi: MyString
+  passport_issue: MyString
+  applicant_id: 1
